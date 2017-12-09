@@ -44,7 +44,7 @@ class bank {
         array_shift($parsed);
         unset($parsed[count($parsed) - 1]);
         if(count($parsed) == 1){
-            return [self::csob($text)];
+            return array(self::csob($text));
         } else {
             return self::parseFromMultiple($parsed);
         }
